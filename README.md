@@ -1,6 +1,6 @@
 # Welcome to HU
 
-This is an interactive story, a hypertext that you, the reader, are invited to navigate in order to explore different pathways through the narration (it has been debated if the notion of a "player" is more appropriate, or if we should keep speaking of a "reader"). To do so, you can click on underlined words in a passage. They will lead y–ou to other passages.
+This is an interactive story, a hypertext that you, the reader, are invited to navigate in order to explore different pathways through the narration (it has been debated if the notion of a "player" is more appropriate, or if we should keep speaking of a "reader"). To do so, you can click on underlined words in a passage. They will lead you to other passages.
 
 This contribution is also a reflection of my time as a guest lecturer in Game Arts and Design at Nanjing University of the Arts. However, any similarity to events or persons is coincidental. My goal is not to report on actual events (these reports are part of the source material) but to discuss my personal experience in the context of available literature on topics and concerns in international education. In particular, I will talk about preconceptions and stereotypes about international students and query them through my personal perspective. The first-person perspective of the interactive story invites you as the reader/player to reflect on your own opinions and possibly gain new perspectives by consulting the referenced literature.
 
