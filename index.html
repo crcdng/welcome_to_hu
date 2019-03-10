@@ -166,7 +166,7 @@ h4 {
 
 
 
-</script><tw-tag name="fd" color="yellow"></tw-tag><tw-passagedata pid="1" name="Day 1: Arrival" tags="fd" position="801,74" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
+</script><tw-tag name="fd" color="yellow"></tw-tag><tw-passagedata pid="1" name="Day 1: Arrival" tags="fd" position="800,75" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
 
 You arrive at the airport late in the evening, more than twenty hours since you left your home. After clearing immigration and collecting your luggage, you enter the arrival hall. Exhausted from the journey and the shift in timezones, you start looking around for a transport that gets you to Harmonious University.
 
@@ -176,99 +176,110 @@ To the left you can see a sign that says &quot;[[Bus Station]]&quot;.
 To the right side there is a sign &quot;[[Street Exit]]&quot;.
 You can check your [[notes|Travel Notes]] provided by the University travel agency. 
 A man approaches you: &quot;Taxi???&quot; [[How comfortable, follow the man.|Wrong Taxi]]&quot;
-</tw-passagedata><tw-passagedata pid="2" name="Bus Station" tags="fd" position="812,265" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
-
-You take the exit with the sign that points to the bus station.
+</tw-passagedata><tw-passagedata pid="2" name="Bus Station" tags="fd" position="825,275" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
 Outside, the air is warm and dry. You can see a long lines of buses. There are no Taxis around. 
 
-[[Go back|Day 1: Arrival]]</tw-passagedata><tw-passagedata pid="3" name="Street Exit" tags="fd" position="666,265" size="100,100">!! Getting a Ride 
+[[Go back|Day 1: Arrival]]</tw-passagedata><tw-passagedata pid="3" name="Street Exit" tags="fd" position="675,325" size="100,100">!! Getting a Ride 
 
-You leave the airport hall through the street exit. Even at this time, there is a lot of traffic. You can spot the taxi line, where a uniformed dispatcher assignes cabs to the people waiting. You wonder if the students will be still waiting. 
+You leave the airport hall through the street exit. You can spot the Taxi line, where a uniformed dispatcher assigns the cabs to the people waiting. You wonder if the students will still be there. 
 
-You get into the taxi and show the driver your destination.
+You get into the Taxi and show the driver your destination.
 
 //It is useful to have your destination printed out on a map and in local language.// 
 
-After an hour drive you [[arrive at the University|Welcome to HU]]
+After an hour-long drive you [[arrive at the University|Welcome to HU]]
 
-</tw-passagedata><tw-passagedata pid="4" name="Call the University" tags="fd" position="220,442" size="100,100">!! On the Phone
+</tw-passagedata><tw-passagedata pid="4" name="On the Phone" tags="fd" position="485,402" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-An automated voice says something in a foreaign language. Unfortunately your language knowledge is limited. Right - the travel notes mentioned that the University would not be available at this time.
+An automated voice says something in a foreign language. Unfortunately your knowledge is limited. Right - the travel notes mentioned that the University would not be available at this time.
 
-[[Call the Emergency number|Emergency Call]]
-[[This is not really an emergency. Find another way|Day 1: Arrival]]
+You  dial the travel emergency number. After some waiting you finally get some good advice: &quot;Take a Taxi from the official stand at the Street Exit.&quot;
 
-</tw-passagedata><tw-passagedata pid="5" name="Day 2: Hello Class" tags="" position="1200,75" size="200,100">
-[todo] 
-Greetings, First Impressions
+[[Look for the Taxi stand.|Day 1: Arrival]]
 
-[continue] 
-Placeholder
+</tw-passagedata><tw-passagedata pid="5" name="Day 2: Hello Class" tags="fd" position="1200,75" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[[Day 3: Teaching and Learning]]
+&lt;&lt;set $engagement to 0&gt;&gt;
+
+Your very first class - 50 fresh faces. Some of them seem to speak English very well but it is too early to tell if this applies to everybody. The students are less different from the ones at home than you would have expected from what you  heard about them  before. 
+
+The whiteboard isnn&#39;t there and you ask the assistant about it.
+
+The class goes by quickly and you take the rest of the day off to relax. On to the [[next lecture|Day 3: Teaching and Learning]].
 
 !!!! Literature
 @@.literature;
 Edwards, V. and Ran, A. (2006) Meeting the needs of Chinese students in British Higher Education. Report from a Sino-British Trust Workshop. Reading: The National Centre for Language &amp; Literacy, University of Reading.
+
 Heng, T. T. (2018) ‘Different is not deficient: contradicting stereotypes of Chinese international students in US higher education’, Studies in Higher Education, 43(1), pp. 22–36. doi: 10.1080/03075079.2016.1152466.
+
 Mathias, J., Bruce, M. and Newton, D. P. (2013) ‘Challenging the Western stereotype: do Chinese international foundation students learn by rote?’, Research in Post-Compulsory Education, 18(3), pp. 221–238. doi: 10.1080/13596748.2013.819257.
+
 Soysal, Y. (2018) In search of excellence - Chinese students on the move. University of Essex.
 @@
 
-</tw-passagedata><tw-passagedata pid="6" name="Day 3: Teaching and Learning" tags="" position="1524,75" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
+</tw-passagedata><tw-passagedata pid="6" name="Day 3: Teaching and Learning" tags="fd" position="1525,75" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[todo] 
-Apparently low engagement
+&lt;&lt;if $engagement is 3&gt;&gt;\
+	The engagement of the students has significantly improved.
+&lt;&lt;elseif $engagement is 2&gt;&gt;\
+	The engagement of the students is higher than at the beginning.
+&lt;&lt;elseif $engagement is 1&gt;&gt;\
+	The engagement of the students seems a bit better now..
+&lt;&lt;else&gt;&gt;\
+	Compared to yesterday, apparently there is low engagement among the 	students. Many are on their smartphones and some seem almost asleep.
+&lt;&lt;endif&gt;&gt;
 
-[continue] 
-Placeholder
+Do some [[Groupwork]] exercises.
+Give the students opportunities for [[Peer Learning]].
+Try a [[Flipped Classroom]] approach. 
+[[Maybe you should confront the students?|Should I Confront Students?]]
+[[Maybe you should complain about the students?|Should I Complain About Students?]]
 
-[[Groupwork]]
-[[Peer Learning]]
-[[Flipped Classroom]]
-[[Should I Confront Students?]]
-[[Should I Complain About Students?]]
+[[Enough for today|Day 4: Still No Whiteboard]]
 
-!!!! Literature
-@@.literature;
-@@
+</tw-passagedata><tw-passagedata pid="7" name="Day 4: Still No Whiteboard" tags="fd" position="1825,75" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
 
-</tw-passagedata><tw-passagedata pid="7" name="Day 4: Still No Whiteboard" tags="" position="1825,75" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
+Time flies! It is your final day already and there is only one more lecture left. For this one you really need the whiteboard, but unfortunately it has not appeared yet. 
 
-[[Be Flexible]]
-[[Be Polite]]
-[[Assistant]]
-[[Colleague]]
-[[Head of School]]</tw-passagedata><tw-passagedata pid="8" name="Head of School" tags="" position="2126,700" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+Talk to your [[Assistant]].
+Contact your [[Colleague]].
+Complain to the [[Head of School]].
+[[Be Polite]] and say nothing.
+[[Be Flexible]] and try to find another solution. 
+</tw-passagedata><tw-passagedata pid="8" name="Head of School" tags="fd" position="2096,739" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[[Day 5: Goodbye]]</tw-passagedata><tw-passagedata pid="9" name="Notes" tags="" position="50,25" size="100,100">Story Format: Sugarcube 2.21.0
+You ask for a meeting and complain directly to the head of school, making sure she gets the point. 
+
+[[Try something else|Day 4: Still No Whiteboard]]
+[[How Should I Deal With Problems?]]</tw-passagedata><tw-passagedata pid="9" name="Notes" tags="" position="50,25" size="100,100">Story Format: Sugarcube 2.21.0
 Twine version: 2.1.0.
-</tw-passagedata><tw-passagedata pid="10" name="Wrong Taxi" tags="fd" position="965,263" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+</tw-passagedata><tw-passagedata pid="10" name="Wrong Taxi" tags="fd" position="950,275" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
 You follow the friendly driver outside and enter his car, noticing that it doesn&#39;t look like an official cab. Anyway, he is helpful with the luggage and you are getting really tired now. A little nap cannot hurt. 
 
-//You won&#39;t do this.// 
+//In reality, you won&#39;t do this.// 
 
-[[Back to Safety|Day 1: Arrival]]</tw-passagedata><tw-passagedata pid="11" name="Welcome to HU" tags="fd" position="736,523" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+[[Back to Safety|Day 1: Arrival]]</tw-passagedata><tw-passagedata pid="11" name="Welcome to HU" tags="fd" position="725,525" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-A group of cheerful students is greeting you at the entrance of the University. They tell you that your initial meeting with the local colleagues is scheduled at noon. You are quite happy to have a good rest after the long journey. 
+A group of cheerful students is greeting you at the entrance of the University. They tell you that your initial meeting with the local colleagues is scheduled before noon. After the long journey, you are quite looking forward to a good amount of rest.  
 
-The students are now going to show you your apartment on campus. Two of them offer to take your suitcase.
+The students are now going to show you your apartment on campus. Two of them offer to take your luggage.
 
 [[You are grateful about the friendly gesture|Should Students Carry the Luggage?]]
 [[You politely decline the offer|I Carry It Myself]]
 
-</tw-passagedata><tw-passagedata pid="12" name="Welcome to Harmonious University" tags="fd" position="352,25" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
+</tw-passagedata><tw-passagedata pid="12" name="Welcome to Harmonious University" tags="fd" position="350,25" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
 !!Preface
 
-This is an interactive story, a hypertext that you, the reader, are invited to navigate in order to explore different pathways through the narration (it has been debated if the notion of a &quot;player&quot; is more appropriate, or if we should keep speaking of a &quot;reader&quot;). To do so, you click on marked words on a page. They will lead you to other pages. If you have not encountered this kind of text before, it is a good idea to try it out [[now-&gt;Example Passage]].
+This is a very short interactive story that you, the reader, are invited to navigate in order to explore the narration. To do so, you click on marked words on a page. They will lead you to other pages. If you haven&#39;t encountered this kind of text before, it is a good idea to try it out [[now-&gt;Example Passage]].
 
 This contribution is also a reflection of my time as a guest lecturer in Game Arts and Design at Nanjing University of the Arts. However, any similarity to events or persons is coincidental. My goal is not to report on actual events, but to discuss my experiences in the context of available literature on topics and concerns in international education. In particular, I want to address preconceptions and stereotypes about international students and query them from a personal view (plus a bit of travel advice). The first-person perspective of this interactive story invites you as the reader/player to reflect on your own opinions and possibly gain new perspectives by consulting the provided literature.
 
-This is an example of what Lugmayr has called &quot;Serious Storytelling&quot;. As such, it might be useful for you if you find yourself in the situation to be assigned to teach in a foreign country. Maybe you are preparing for taking in international students in your course, or maybe you are just curious to reflect on my insights based on yours.
+It also is an example of what Lugmayr calls &quot;Serious Storytelling&quot;. As such, it might be useful for you if you find yourself in the situation to be assigned to teach in a foreign country. Maybe you are preparing for taking in international students in your course, or maybe you are just curious to reflect on my insights based on yours.
 
-Last but not least, the story is written as an assignment for the Negotiated Study Module of the Postgraduate Certificate in Academic Practice (PGCAP) programme at the University of Plymouth. Therefore, besides the interactive narration you will find some relevant literature on international and transnational education. Some pages may also contain remarks; these are formatted in //emphasized text//. For my assignment, this text is supplemented by a separate piece of reflective writing, which is not required to play the story. Also because of this context, the story is quite short, much less than you would expect in a full-flegded piece of interactive fiction. This could  certainly something to be addressed in a future project.
+Last but not least, the story is written as an assignment for the Negotiated Study Module of the Postgraduate Certificate in Academic Practice (PGCAP) programme at the University of Plymouth. Therefore, besides the interactive narration you will find some remarks and  literature on international education.
 
 With that in mind, welcome to Harmonious University! Let us [[begin-&gt;Day 1: Arrival]].
 
@@ -284,124 +295,183 @@ Lugmayr, A. et al. (2017) ‘Serious storytelling – a first definition and rev
 
 Straeubig, M. (2018) NUA DAT 401 assignment delivery retrospective. Internal Report. University of Plymouth.
 @@
-</tw-passagedata><tw-passagedata pid="13" name="Example Passage" tags="" position="201,25" size="100,100">Sometimes, links will bring you [[back to the passage where you came from|Welcome to Harmonious University]]. Other links may lead you further into the story. You can  start the story from the beginning clicking the ~~Restart~~ button in the footer. </tw-passagedata><tw-passagedata pid="14" name="Travel Notes" tags="fd" position="283,163" size="100,100">&#39;&#39;Travel Notes -- please read carefully&#39;&#39;
+</tw-passagedata><tw-passagedata pid="13" name="Example Passage" tags="fd" position="201,25" size="100,100">Sometimes, links will bring you [[back to the passage where you came from|Welcome to Harmonious University]]. Other links may lead you further into the story. You can start the story from the beginning clicking the &#39;&#39;Restart&#39;&#39; button. </tw-passagedata><tw-passagedata pid="14" name="Travel Notes" tags="fd" position="283,163" size="100,100">&#39;&#39;Travel Notes -- please read carefully&#39;&#39;
 
 Harmonious University: 555-421-1290. Monday to Friday 9am to 5pm.
 
-In extraordinary circumstances assistance is available 555-867-5309.
+In extraordinary circumstances, travel assistance is available 555-867-5309.
 
-Subsistence: You can spend £10 per day but remember to keep all your receipts. Claim forms are available from the Employee Self Service portal.
+Subsistence: You can spend £10 per day but please remember to keep all your receipts. Claim forms are available from the Employee Self Service portal.
 
-[[Call the University|Call]]</tw-passagedata><tw-passagedata pid="15" name="Call" tags="fd" position="219,308" size="100,100">You take out your phone but suddenly remember that you don&#39;t have a phone plan for this country. This could come expensive. 
+[[Call the University|Call]]</tw-passagedata><tw-passagedata pid="15" name="Call" tags="fd" position="333,309" size="100,100">You take out your phone but suddenly remember that you don&#39;t have a phone plan for this country. This could come expensive. 
 
-[[Call anyway|Call the University]]
+[[Call anyway|On the Phone]]
 [[Try something else instead|Day 1: Arrival]]
-</tw-passagedata><tw-passagedata pid="16" name="Emergency Call" tags="fd" position="363,440" size="100,100">You dial the travel emergency number. After some waiting time you finally get an agent on the line. He checks the available connections and advises you to get a cab: 
+</tw-passagedata><tw-passagedata pid="16" name="First Meeting" tags="fd" position="1100,275" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-&quot;Take a taxi from the official Taxi stand at the Street Exit.&quot;
+You are enjoying a good night&#39;s sleep. At noon you attend your first meeting with the local colleagues. After introductions, you are discussing the delivery of the module with the team. 
 
-[[Look around|Day 1: Arrival]]</tw-passagedata><tw-passagedata pid="17" name="First Meeting" tags="" position="1083,408" size="100,100">[todo] 
-Colleagues, Assistant, Checklist: Whiteboard
+You also get to know the assistant lecturer which is assigned to the class and take the opportunity to ask a lot of questions. During a tour of the classroom, you notice that the whiteboard that you previously had asked for is missing. It is important for some of the exercises, therefore you mention the issue. 
 
-[continue] 
-Placeholder
+Later you have lunch with the colleagues. After that you get ready for your [[first lecture |Day 2: Hello Class]].
 
-[[Day 2: Hello Class]]
 
-!!!! Literature
+</tw-passagedata><tw-passagedata pid="17" name="Reflection" tags="fd" position="2575,675" size="200,100">!!&lt;&lt;print passage()&gt;&gt;
+
+//This concludes our little story. If you like to reflect on your decisions, here are the questions again. I also copied a selection of the literature below.
+
+* [[Should Students Carry the Luggage?|Should Students Carry the Luggage?]]
+* [[How Should I Deal With Problems?|How Should I Deal With Problems?]]
+* [[Should I Complain About Students?|Should I Complain About Students?]]
+* [[Should I Confront Students?|Should I Confront Students?]]
+* [[Should I Accept a Present?|Should I Accept a Present?]]
+
+Bonus Question: Are there factors beyond nationality and culture that might account for a different experience such as  size or gender distribution of your cohort ?//
+
+!!!! Selected Literature
 @@.literature;
-Lewis, R. D. (2006) When cultures collide. Leading across cultures. Boston, MA: Nicholas Brealey International.
-@@
+Edwards, V. and Ran, A. (2006) Meeting the needs of Chinese students in British Higher Education. Report from a Sino-British Trust Workshop. Reading: The National Centre for Language &amp; Literacy, University of Reading.
 
-</tw-passagedata><tw-passagedata pid="18" name="Reflection" tags="" position="2450,742" size="200,100">room: &#39;Reflection&#39;
-config.header.center: &#39;{room}&#39;
---
+Jackson-Mead, K. and Wheeler, J. R. (eds) (2014) IF Theory Reader. JRW Digital Media.
 
+Heng, T. T. (2018) ‘Different is not deficient: contradicting stereotypes of Chinese international students in US higher education’, Studies in Higher Education, 43(1), pp. 22–36. doi: 10.1080/03075079.2016.1152466.
 
+Lage, M. J., Platt, G. J. and Treglia, M. (2000) ‘Inverting the Classroom: A Gateway to Creating an Inclusive Learning Environment’, Journal of Economic Education, p. 14.
 
-Are there factors beyond nationality and culture that account for the different experience such as the size or gender distribution of your cohort ?
+Lugmayr, A. et al. (2017) ‘Serious storytelling – a first definition and review’, Multimedia Tools and Applications, 76(14), pp. 15707–15733. doi: 10.1007/s11042-016-3865-5.
 
+Mathias, J., Bruce, M. and Newton, D. P. (2013) ‘Challenging the Western stereotype: do Chinese international foundation students learn by rote?’, Research in Post-Compulsory Education, 18(3), pp. 221–238. doi: 10.1080/13596748.2013.819257.
 
-#### Literature
-&lt;font size=&quot;-1&quot;&gt;
+Mazur, E. (2014) Peer instruction: a user’s manual. Harlow: Pearson.
 
-&lt;br&gt;
-&lt;/font&gt;</tw-passagedata><tw-passagedata pid="19" name="Day 5: Goodbye" tags="" position="2500,350" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+Soysal, Y. (2018) In search of excellence - Chinese students on the move. University of Essex.
 
-[[Should I accept a Present?]]</tw-passagedata><tw-passagedata pid="20" name="Should Students Carry the Luggage?" tags="" position="927,409" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+Wisker, G. (ed.) (2000) Good practice working with international students. Birmingham: Staff and Educational Development Association (SEDA paper, 110).
+@@</tw-passagedata><tw-passagedata pid="18" name="Day 5: Goodbye" tags="fd" position="2500,350" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+
+It is time to leave. Your have packed your bags and you are ready to travel. A few students have come to say goodbye. One student approaches you and offers a bag of tea as a present. 
+
+[[Yes, I&#39;ll take it|Should I Accept a Present?][$present=true]]
+[[No, I can&#39;t accept presents|Should I Accept a Present?][$present=false]]</tw-passagedata><tw-passagedata pid="19" name="Should Students Carry the Luggage?" tags="fd" position="950,400" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
 //This a tricky question. 
 
-Navigating intercultural space requires awareness aspects to interpret a situation like this: a genuine offer to help, different understanding of student and teacher roles and responsibilities, University regulations. During my time in China for example, I observed that whenever material was needed for a class, students were dispatched to buy them, very different way of procurement from what I was used to.//  
+Navigating intercultural spaces asks for awareness of a multitude of aspects: interpreting genuine offers to help, understanding of &quot;normal&quot; student and teacher behaviour, roles and responsibilities, knowing University regulations. 
 
-Reflecting on your first encounter, you have a good night sleep and the next day enter your [[First Meeting]].</tw-passagedata><tw-passagedata pid="21" name="Groupwork" tags="" position="1475,549" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+For example, during my time in China, I observed that whenever material was needed for a class, students were dispatched to go and buy it. A very different way of procurement from what I was used to in the UK.
 
-[[Day 3: Teaching and Learning]]
-[[Day 4: Still No Whiteboard]]
+My personal approach in situations like these was to practice my  understanding by observing in favour of of judging and by asking in favour of asserting.
+//  
+
+Reflecting on your encounter, you feel the . [[First Meeting]].
+</tw-passagedata><tw-passagedata pid="20" name="Groupwork" tags="fd" position="1475,550" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+
+&lt;&lt;set $engagement to $engagement + 1&gt;&gt;
+
+You do group work exercises with the students.
+
+[[Go back|Day 3: Teaching and Learning]]
+[[Let&#39;s call it a day|Day 4: Still No Whiteboard]]
 
 !!!! Literature
 @@.literature;
 Wisker, G. (ed.) (2000) Good practice working with international students. Birmingham: Staff and Educational Development Association (SEDA paper, 110).
 @@
-</tw-passagedata><tw-passagedata pid="22" name="Peer Learning" tags="" position="1675,550" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+</tw-passagedata><tw-passagedata pid="21" name="Peer Learning" tags="fd" position="1675,550" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[[Day 3: Teaching and Learning]]
-[[Day 4: Still No Whiteboard]]
+&lt;&lt;set $engagement to $engagement + 1&gt;&gt;
+
+You encourage the students to pairwise instruct each other.
+
+[[Go back|Day 3: Teaching and Learning]]
+[[Let&#39;s call it a day|Day 4: Still No Whiteboard]]
 
 !!!! Literature
 @@.literature;
 Mazur, E. (2014) Peer instruction: a user’s manual. Harlow: Pearson.
-@@</tw-passagedata><tw-passagedata pid="23" name="Flipped Classroom" tags="" position="1900,550" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+@@</tw-passagedata><tw-passagedata pid="22" name="Flipped Classroom" tags="" position="1900,550" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[[Day 3: Teaching and Learning]]
-[[Day 4: Still No Whiteboard]]
+&lt;&lt;set $engagement to $engagement + 1&gt;&gt;
+
+You ask the students to create topics and questions for the class.
+
+[[Go back|Day 3: Teaching and Learning]]
+[[Let&#39;s call it a day|Day 4: Still No Whiteboard]]
 
 !!!! Literature
 @@.literature;
 Lage, M. J., Platt, G. J. and Treglia, M. (2000) ‘Inverting the Classroom: A Gateway to Creating an Inclusive Learning Environment’, Journal of Economic Education, p. 14.
-@@</tw-passagedata><tw-passagedata pid="24" name="Should I accept a Present?" tags="" position="2500,525" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+@@</tw-passagedata><tw-passagedata pid="23" name="Should I Accept a Present?" tags="fd" position="2500,525" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-Double-click this passage to edit it.
+&lt;&lt;if $present is true&gt;&gt;\
+	You took the present.
+&lt;&lt;else&gt;&gt;\
+	You declined the present.
+&lt;&lt;endif&gt;&gt;
 
+//Was it correct? I suggest to find an answer yourself.//
 
-ask for advice 
-regulations of joint programme, which regulation
-are you under. Prufungsordnung
+[[Go to Reflection and Literature|Reflection]]
 
+!!The End.
 
-[[Reflection]]</tw-passagedata><tw-passagedata pid="25" name="Colleague" tags="" position="2150,575" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+</tw-passagedata><tw-passagedata pid="24" name="Colleague" tags="fd" position="2150,575" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[[Day 5: Goodbye]]</tw-passagedata><tw-passagedata pid="26" name="Assistant" tags="" position="2150,425" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+You take your complaint to your lecturer colleague. He apologizes profoundly and explains that there was a miscommunication with the school office.
 
-[[Day 5: Goodbye]]</tw-passagedata><tw-passagedata pid="27" name="Should I Confront Students?" tags="" position="1225,325" size="100,100">room: &#39;Should I Confront Students?&#39;
-config.header.center: &#39;{room}&#39;
---
+[[Try something else|Day 4: Still No Whiteboard]]
+[[How Should I Deal With Problems?]]</tw-passagedata><tw-passagedata pid="25" name="Assistant" tags="fd" position="2150,425" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[[Day 3: Teaching and Learning]]
-[[Day 4: Still No Whiteboard]]
+You discuss the topic again with the assistant. He promises to take care of the situation.
 
-#### Literature
-&lt;font size=&quot;-1&quot;&gt;
+[[Try something else|Day 4: Still No Whiteboard]]
+[[How Should I Deal With Problems?]]</tw-passagedata><tw-passagedata pid="26" name="Should I Confront Students?" tags="fd" position="1225,275" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-&lt;br&gt;
-&lt;/font&gt;</tw-passagedata><tw-passagedata pid="28" name="Be Polite" tags="" position="2175,300" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+You are not sure if you should address the students directly.
 
+[[Go back|Day 3: Teaching and Learning]]
+[[Let&#39;s call it a day|Day 4: Still No Whiteboard]]
 
-[[Day 5: Goodbye]]</tw-passagedata><tw-passagedata pid="29" name="Should I Complain About Students?" tags="" position="1275,500" size="100,100">
+!!!! Literature
+@@.literature;
+Heng, T. T. (2018) ‘Different is not deficient: contradicting stereotypes of Chinese international students in US higher education’, Studies in Higher Education, 43(1), pp. 22–36. doi: 10.1080/03075079.2016.1152466
+@@
+</tw-passagedata><tw-passagedata pid="27" name="Be Polite" tags="fd" position="2175,300" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-[[Day 3: Teaching and Learning]]
-[[Day 4: Still No Whiteboard]]
+You decide say nothing, not to offend anyone.
 
-#### Literature
-&lt;font size=&quot;-1&quot;&gt;
+[[Try something else|Day 4: Still No Whiteboard]]
+[[How Should I Deal With Problems?]]</tw-passagedata><tw-passagedata pid="28" name="Should I Complain About Students?" tags="fd" position="1275,500" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
 
-&lt;br&gt;
-&lt;/font&gt;</tw-passagedata><tw-passagedata pid="30" name="Be Flexible" tags="" position="2200,175" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+You contemplate if you should talk to your colleague about the students&#39; behaviour. Maybe you can understand them better.
 
-[[Day 5: Goodbye]]</tw-passagedata><tw-passagedata pid="31" name="I Carry It Myself" tags="fd" position="939,635" size="100,100">The students are friendly but persistent. They insist to carry it for you.
+[[Go back|Day 3: Teaching and Learning]]
+[[Let&#39;s call it a day|Day 4: Still No Whiteboard]]
+
+!!!! Literature
+@@.literature;
+Soysal, Y. (2018) In search of excellence - Chinese students on the move. University of Essex.
+@@
+</tw-passagedata><tw-passagedata pid="29" name="Be Flexible" tags="fd" position="2200,175" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+
+You go searching with the assistant and finally you find some large sheets of paper. With a bit of tape, they are almost as good as a whiteboard. 
+
+[[Try something else|Day 4: Still No Whiteboard]]
+[[How Should I Deal With Problems?]]</tw-passagedata><tw-passagedata pid="30" name="I Carry It Myself" tags="fd" position="950,625" size="100,100">The students are friendly but persistent. They insist to carry it for you.
 
 [[You give in, secretely relieved|Should Students Carry the Luggage?]]
-[[You are uncomfortable about the idea that students should carry a lecturer&#39;s luggage and keep politely but firmly declining|Should Students Carry the Luggage?]]</tw-passagedata></tw-storydata></div>
+[[You are uncomfortable about the idea that students should carry a lecturer&#39;s luggage and keep politely but firmly declining|Should Students Carry the Luggage?]]</tw-passagedata><tw-passagedata pid="31" name="How Should I Deal With Problems?" tags="fd" position="2500,150" size="100,100">!!&lt;&lt;print passage()&gt;&gt;
+
+//
+&lt;&lt;if visited(&quot;Head of School&quot;) &gt; 0&gt;&gt;\
+	It is probably not useful to escalate the situation like this.
+&lt;&lt;else&gt;&gt;\
+	There are many ways to answer this question. I found the &quot;be flexible&quot; route to be most useful for me. 
+&lt;&lt;endif&gt;&gt;
+
+It is easy to irritate hierachical structures and it is also easy to make a cultural gaffe. But I think that excessive fear of making a mistake does not help either. Mistakes and misunderstandings happen and they can be dealt with through mutual respect and sustained conversation.// 
+
+[[Day 5: Goodbye]]</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),"object"===("undefined"==typeof n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r,r<0&&(r=0)),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n,n<0&&(n=e-1)),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if(null==e||"object"!==("undefined"==typeof e?"undefined":_typeof(e))||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){var r=0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1));return e[r]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var t=Array.from(this);if(0===arguments.length)return t;var r=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),n=r.length;if(0===n)return t;for(var a=Array.prototype.indexOf,i=Array.prototype.push,o=0;o<n;++o){var e=r[o];a.call(t,e)===-1&&i.call(t,e)}return t}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do a.push(n.call(this,_random(0,i--),1)[0]);while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.push,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return this[t]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do o=_random(0,i);while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.unshift,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Windows:t||e.includes("iemobile"),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null;return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a})}(),_ref3=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){var r=i;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){var n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return"( "+n+" )"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref3.clone,convertBreaks=_ref3.convertBreaks,safeActiveElement=_ref3.safeActiveElement,setPageElement=_ref3.setPageElement,throwError=_ref3.throwError,toStringOrDefault=_ref3.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){return Object.prototype.toString.call(e).slice(8,-1)}function r(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function n(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function a(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function i(e){if(null==e)return"";var t=String(e);return t&&h.test(t)?t.replace(p,function(e){return g[e]}):t}function o(e){if(null==e)return"";var t=String(e);return t&&y.test(t)?t.replace(m,function(e){return v[e.toLowerCase()]}):t}function s(e,t){var r=String(e),n=Math.trunc(t),a=r.charCodeAt(n);if(Number.isNaN(a))return{char:"",start:-1,end:-1};var i={char:r.charAt(n),start:n,end:n};if(a<55296||a>57343)return i;if(a>=55296&&a<=56319){var o=n+1;if(o>=r.length)return i;var s=r.charCodeAt(o);return s<56320||s>57343?i:(i.char=i.char+r.charAt(o),i.end=o,i)}if(0===n)return i;var u=n-1,l=r.charCodeAt(u);return l<55296||l>56319?i:(i.char=r.charAt(u)+i.char,i.start=u,i)}function u(){return(Has.performance?performance:Date).now()}function l(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function c(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function d(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function f(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}var p=/[&<>"'`]/g,h=new RegExp(p.source),g=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),m=/&(?:amp|#38|#x26|lt|#60|#x3c|gt|#62|#x3e|quot|#34|#x22|apos|#39|#x27|#96|#x60);/gi,y=new RegExp(m.source,"i"),v=Object.freeze({"&amp;":"&","&#38;":"&","&#x26;":"&","&lt;":"<","&#60;":"<","&#x3c;":"<","&gt;":">","&#62;":">","&#x3e;":">","&quot;":'"',"&#34;":'"',"&#x22;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},toStringTag:{value:t},isNumeric:{value:r},isBoolean:{value:n},slugify:{value:a},escape:{value:i},unescape:{value:o},charAndPosAt:{value:s},fromCssTime:{value:l},toCssTime:{value:c},fromCssProperty:{value:d},parseUrl:{value:f},now:{value:u},random:{value:Math.random},entityEncode:{value:i},entityDecode:{value:o},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(y,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');
